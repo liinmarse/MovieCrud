@@ -40,7 +40,7 @@
     width: 65%;
     background-color: aliceblue;
     border-radius: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
 
 }
 .ul{
@@ -81,6 +81,7 @@
     text-align: center;
 
 }
+
 .get-all-btn{
     margin-left: 10px;
     margin-top: 20px;
