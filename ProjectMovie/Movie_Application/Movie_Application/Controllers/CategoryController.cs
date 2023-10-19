@@ -23,14 +23,14 @@ namespace Movie_Application.Controllers
                     StatusCode = "404",
                     Message = "Category not found"
                 });
-            return Ok (CategoryToReturn);
-            
+            return Ok(CategoryToReturn);
+
         }
         [HttpGet]
-        public IActionResult GetAllCategories()=>Ok(DataBase.DataBase.Categories);
+        public IActionResult GetAllCategories() => Ok(DataBase.DataBase.Categories);
 
         [HttpPost]
-        public IActionResult PostSingleCategory( [FromQuery]String name)
+        public IActionResult PostSingleCategory([FromQuery] String name)
         {
             if (name is not null)
             {
@@ -51,6 +51,22 @@ namespace Movie_Application.Controllers
             }
 
         }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteCategoryById(int id)
+        { foreach ( var cta in DataBase.DataBase.Categories)
+            {
+                if(cta.Id == id)
+                {
+                    DataBase.DataBase.Categories.Remove(cta);
+                    return Ok(cta);
+                }
+              
+            }
+          return BadRequest();
+           
+
+        }
+
 
     }
 }
