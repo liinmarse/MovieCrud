@@ -1,5 +1,10 @@
 const resultElement = document.getElementById('actual-result');
 const getAllBtn = document.getElementById('get-all-btn');
+const NameCategory = document.getElementById('NameCategory');
+const formCreate= document.querySelector('.FormCreate');
+const formDelete=document.querySelector('.FormDelete')
+const IdToDelete=document.getElementById('IdToDElete');
+
 
 const baseURL = 'https://localhost:7285/';
 const CategoryURI = 'Category/';
@@ -24,8 +29,6 @@ const getAllCategoryAsync = async (event) => {
 getAllBtn.addEventListener('click', getAllCategoryAsync);
 
 
-const NameCategory = document.getElementById('NameCategory');
-const Create = document.getElementById('Create-btn');
 
 const CreateCategoryAsync = async (event) => {
     event.preventDefault();
@@ -34,8 +37,24 @@ const CreateCategoryAsync = async (event) => {
     await fetch( `https://localhost:7285/Category?name=${Name}`,
     {
         method:'POST'});
+        document.getElementById('NameCategory').value='';
     }
-Create.addEventListener('submit', CreateCategoryAsync);
+
+formCreate.addEventListener('submit', CreateCategoryAsync);
+
+
+
+const DeleteCategoryByID =async(event)=>{
+    event.preventDefault();
+
+    await fetch(`https://localhost:7285/Category/${IdToDelete.value}`,
+        { 
+            method: 'DELETE'
+        })
+     document.getElementById('IdToDElete').value='';
+   
+}
+formDelete.addEventListener('submit', DeleteCategoryByID);
 
 
 

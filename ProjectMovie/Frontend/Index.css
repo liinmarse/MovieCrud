@@ -3,11 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     
+    
 }
-
+body{
+    background-color: black;
+}
 
 .container{
     border: black 2px solid;
+    margin-left: 50px;
     
 }
 .header{
@@ -31,7 +35,8 @@
     width: 30%;
     height: 500px;
     background-color:black;
-    
+    border: red 2px solid;
+   
     
     
     
@@ -39,7 +44,7 @@
 .result{
     width: 65%;
     background-color: aliceblue;
-    border-radius: 20px;
+   border: red 2px solid;
     margin-left: 5px;
 
 }
@@ -52,13 +57,23 @@
     height: 200px;
     margin-bottom: 20px;
     
+   
+    
 }
-.form{
+.FormDelete{
     height: 250px;
     width: 25vw;
     margin-left: 28px;
     border-radius: 30px; 
+    
+  
 
+}
+.FormCreate{
+    
+    width: 25vw;
+    margin-left: 28px;
+    border-radius: 30px; 
 }
 .h2{   
     padding-top: 20px;
@@ -66,32 +81,46 @@
     color:white;
 
 }
-.input-btn{
-  
-}
+
 .input{
-    display: block;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    border: black 2px solid;
-    border-radius: 10px;
-    width: 95%;
+   
+   
+    margin: 10px 10px 10px 0px;
     height: 30px;
+    width: 60%;
+    border:white 2px solid;
+    border-radius: 10px;
     text-align: center;
 
+    
+
+}
+.submit{
+    height: 30px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: red;
+    border: red 2px solid;
+    border-radius: 10px;
+    color: aliceblue;
+}
+.submit:hover{
+    background-color: rgba(184, 10, 10, 0.404);
+    border:red 2px solid;
+   
+    
 }
 
 .get-all-btn{
-    margin-left: 10px;
-    margin-top: 20px;
+    
+    margin-top: 30px;
     border-radius: 10px;
     height: 40px;
     width: 95%;
     background-color:red;
     border: black 2px solid;
     cursor: pointer;
-    
+    color: aliceblue;
 
     
 }.get-all-btn:hover {

@@ -52,7 +52,7 @@ namespace Movie_Application.Controllers
 
         }
         [HttpDelete("{id}")]
-        public IActionResult DeleteCategoryById(int id)
+        public IActionResult DeleteCategoryById( int id)
         { foreach ( var cta in DataBase.DataBase.Categories)
             {
                 if(cta.Id == id)
